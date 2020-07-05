@@ -20,28 +20,52 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="其·零 前言（碎碎念）大一的时候学校没有安排什么专业课，自己自学也没什么动力，就这么混到了大二。到了大二，发现很多东西自己都没有学过，有些后悔。希望通过搭建这个博客来记录自己的学习过程，也给自己一点激励和鞭策的作用吧。 其·壹 为什么选择 Hexo博客平台有很多，比如 Typecho 、WordPress 等等。相对于 Typecho 和 WordPress 这类动态博客来说，Hexo 跟他们的最">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows 系统下基于 Hexo 框架的博客构建">
+<meta property="og:url" content="http://yoursite.com/2020/06/07/blog_1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="其·零 前言（碎碎念）大一的时候学校没有安排什么专业课，自己自学也没什么动力，就这么混到了大二。到了大二，发现很多东西自己都没有学过，有些后悔。希望通过搭建这个博客来记录自己的学习过程，也给自己一点激励和鞭策的作用吧。 其·壹 为什么选择 Hexo博客平台有很多，比如 Typecho 、WordPress 等等。相对于 Typecho 和 WordPress 这类动态博客来说，Hexo 跟他们的最">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/git%E5%AE%98%E7%BD%91.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/Nodejs.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/cnpm.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/cnpm2.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/hexo.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/blog.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/hexo_init.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/start_hexo.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/new.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/%E6%8F%92%E4%BB%B6.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/%E5%86%85%E5%AE%B9%E4%BF%AE%E6%94%B9.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/%E4%BF%9D%E5%AD%98.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/%E6%8A%A5%E9%94%99.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/%E7%99%BB%E5%BD%95.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/blog_1/%E6%96%B0%E4%B8%9C%E8%A5%BF.png">
+<meta property="article:published_time" content="2020-06-07T11:45:16.000Z">
+<meta property="article:modified_time" content="2020-07-05T14:37:26.562Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/06/07/blog_1/git%E5%AE%98%E7%BD%91.png">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/06/07/blog_1/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Hexo</title>
+  <title>Windows 系统下基于 Hexo 框架的博客构建 | Hexo</title>
   
 
 
@@ -139,138 +163,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/04/blog_2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/04/blog_2/" class="post-title-link" itemprop="url">博文的发布与博客主题替换</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-07-04 19:45:16" itemprop="dateCreated datePublished" datetime="2020-07-04T19:45:16+08:00">2020-07-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-05 22:43:43" itemprop="dateModified" datetime="2020-07-05T22:43:43+08:00">2020-07-05</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="〇-前言"><a href="#〇-前言" class="headerlink" title="〇. 前言"></a>〇. 前言</h2><p>距离搭建 Hexo 博客平台，已经过去了一段时间，虽然有在<strong>有道云笔记</strong>上用 Markdown 把详细过程记录下来，但是由于不可抗力（懒）一直没有把文章上传到博客上面。而且主题也没有换，今天就写篇博客记录一下我发布博客和更换主题中遇到的问题。</p>
-<h2 id="一-博文的发布"><a href="#一-博文的发布" class="headerlink" title="一. 博文的发布"></a>一. 博文的发布</h2><h3 id="1-发布流程"><a href="#1-发布流程" class="headerlink" title="1. 发布流程"></a>1. 发布流程</h3><p>由于我使用的是<strong>有道云笔记</strong>来写的 Markdown ，所以第一步是将 Markdown 文件复制到 <strong>blog/source/_posts</strong> 中, blog 文件夹就是在搭建博客框架时建立的那个。如图所示：</p>
-<p><img src="/2020/07/04/blog_2/posts.png" alt="文件路径"></p>
-<p>管理员模式运行命令行，进入到 blog 目录下，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>hexo 就会自动生成一些 html 文件，再输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>然后在网页中打开 <strong><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></strong> 进行本地预览。</p>
-<p>如果没有问题的话，就可以输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>将博客部署到 Github 上了。</p>
-<h3 id="2-问题解决"><a href="#2-问题解决" class="headerlink" title="2. 问题解决"></a>2. 问题解决</h3><p>本地预览时我发现出现了一些问题：</p>
-<p><strong>Markdown 文件名成为了博客名</strong></p>
-<p><img src="/2020/07/04/blog_2/wrong_1.png" alt="问题"></p>
-<p><strong>Markdown 中用引用语法写的部分格式错误且图片显示不了</strong></p>
-<p>Hexo 本地预览如图</p>
-<p><img src="/2020/07/04/blog_2/wrong_2.png" alt="问题"></p>
-<p>有道云笔记中的预览情况如图</p>
-<p><img src="/2020/07/04/blog_2/preview_2.png" alt="预览"></p>
-<p>下面依次来解决这些问题。</p>
-<h4 id="（1）文件名和博客名的问题"><a href="#（1）文件名和博客名的问题" class="headerlink" title="（1）文件名和博客名的问题"></a>（1）文件名和博客名的问题</h4><p>经过搜索了解到这是由于 Markdown 文件一般格式中，会有这样一个部分：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: postName &#x2F;&#x2F;文章页面上的显示名称，一般是中文</span><br><span class="line">date: 2013-12-02 15:30:16 &#x2F;&#x2F;文章生成时间，一般不改，当然也可以任意修改</span><br><span class="line">categories: 默认分类 &#x2F;&#x2F;分类</span><br><span class="line">tags: [tag1,tag2,tag3] &#x2F;&#x2F;文章标签，可空，多标签请用格式，注意:后面有个空格</span><br><span class="line">description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>把这一部分内容加上就可以了，<strong>但是你用有道云笔记写的时候，这一段是不会默认生成的，需要你手动添加并修改。同时，在有道云笔记预览中，这一段也会变得很丑…</strong></p>
-<p><img src="/2020/07/04/blog_2/preview_1.png" alt="预览"></p>
-<h4 id="（2）图片显示问题"><a href="#（2）图片显示问题" class="headerlink" title="（2）图片显示问题"></a>（2）图片显示问题</h4><p>由于我第一篇博客的图片插入都是用的网络图片插入的方式，且我这个方法是网上随便找到的，极其不靠谱，所以出现了这样的问题。（具体来说就是在有道云笔记中创建一个新笔记，然后向里面放本地图片，然后用的那个图片链接…)</p>
-<p>网络图片插入的方式下篇博客尝试一下吧，这里选择的解决办法是用<strong>相对路径本地引用</strong>的方式。参考<a href="https://www.jianshu.com/p/8d28027fec76" target="_blank" rel="noopener">这篇文章</a>。</p>
-<p>首先，到 blog 目录下查看 _config.yml 文件,查找 post_asset_folder 字段确定 post_asset_folder 设置为 true 。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder:true</span><br></pre></td></tr></table></figure>
-<p>如图所示</p>
-<p><img src="/2020/07/04/blog_2/post_asset_folder.png" alt="改配置文件"></p>
-<p><strong>如果用户权限不够的话，就右键 blog 文件夹，在安全里将当前用户的修改权限勾上即可。</strong></p>
-<p>设置 post_asset_folder 参数后，在建立文件时，Hexo 会自动建立一个与文章<strong>同名</strong>的文件夹，您可以把与该文章相关的所有资源都放到此文件夹内，这样就可以更方便的使用资源。</p>
-<p>用命令行进入到 blog 目录下执行以下命令来进行插件的安装。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-<p><strong>我在安装的时候出现下图警告，但是好像没有影响到实际使用。</strong></p>
-<p><img src="/2020/07/04/blog_2/warn.png" alt="警告"></p>
-<p>然后把想要插入的本地图片放在同名的文件夹内，插入时路径就写 <strong>文件夹名 / 图片名.图片格式</strong> 即可。</p>
-<p>PS1：偶然间发现，图片名的第一位如果是下划线（即”_”）的话会无法引用。而且图片名中如果有空格也会使语法失效。</p>
-<p>PS2:如果没有自动生成同名的文件夹，你手动创建一个同名文件夹也可以。</p>
-<h4 id="（3）格式错误问题"><a href="#（3）格式错误问题" class="headerlink" title="（3）格式错误问题"></a>（3）格式错误问题</h4><p>这个其实不是格式出现了问题……只不过是因为默认的主题的引用格式就是这样的。</p>
-<p>多级的引用效果如图所示</p>
-<p><img src="/2020/07/04/blog_2/test.png" alt="多级引用"></p>
-<h2 id="二-主题更换"><a href="#二-主题更换" class="headerlink" title="二. 主题更换"></a>二. 主题更换</h2><p>选择了比较热门而且比较简约的 NexT 主题，下面是具体过程的展示。</p>
-<h3 id="1-主题下载"><a href="#1-主题下载" class="headerlink" title="1. 主题下载"></a>1. 主题下载</h3><p>进入 Hexo 官网的<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a>页面,下拉找到 NexT 主题，点击标题后跳转到项目的 Github 页面。</p>
-<p><img src="/2020/07/04/blog_2/next.png" alt="找到NexT"></p>
-<p>在 Github 页面下的 README.md 中的 Installation 部分介绍了如何下载主题。</p>
-<p><img src="/2020/07/04/blog_2/next_installation.png" alt="安装NexT"></p>
-<h3 id="2-修改配置文件更换主题"><a href="#2-修改配置文件更换主题" class="headerlink" title="2. 修改配置文件更换主题"></a>2. 修改配置文件更换主题</h3><p>修改 blog 目录下的 _config.yml 文件中的 theme 字段，将其设置为 next 后，主题就更换完了。</p>
-<p><img src="/2020/07/04/blog_2/theme_config.png" alt="修改theme"></p>
-<h3 id="3-本地预览"><a href="#3-本地预览" class="headerlink" title="3. 本地预览"></a>3. 本地预览</h3><p>在命令行中进到 blog 目录下，依次输入以下命令。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>然后就可以去 <strong><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></strong> 中本地预览一下主题效果了。（在下图中确实可以看出引用格式没有出现问题。）</p>
-<p><img src="/2020/07/04/blog_2/next_preview.png" alt="预览NexT"></p>
-<h2 id="三-结语"><a href="#三-结语" class="headerlink" title="三. 结语"></a>三. 结语</h2><p>选择一个合适的 Markdown 编辑器是很有必要的，有道云笔记感觉不是特别好用的样子…</p>
-<p>虽然是疫情期间，但是对于学习来说却是一段好时光。各种折腾之后，总算是大体学会了如何写博客了，接下来要做的是努力坚持更新！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -286,10 +182,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/07/blog_1/" class="post-title-link" itemprop="url">Windows 系统下基于 Hexo 框架的博客构建</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Windows 系统下基于 Hexo 框架的博客构建
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -328,7 +223,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="其·零-前言（碎碎念）"><a href="#其·零-前言（碎碎念）" class="headerlink" title="其·零 前言（碎碎念）"></a>其·零 前言（碎碎念）</h2><p>大一的时候学校没有安排什么专业课，自己自学也没什么动力，就这么混到了大二。到了大二，发现很多东西自己都没有学过，有些后悔。希望通过搭建这个博客来记录自己的学习过程，也给自己一点激励和鞭策的作用吧。</p>
+        <h2 id="其·零-前言（碎碎念）"><a href="#其·零-前言（碎碎念）" class="headerlink" title="其·零 前言（碎碎念）"></a>其·零 前言（碎碎念）</h2><p>大一的时候学校没有安排什么专业课，自己自学也没什么动力，就这么混到了大二。到了大二，发现很多东西自己都没有学过，有些后悔。希望通过搭建这个博客来记录自己的学习过程，也给自己一点激励和鞭策的作用吧。</p>
 <h2 id="其·壹-为什么选择-Hexo"><a href="#其·壹-为什么选择-Hexo" class="headerlink" title="其·壹 为什么选择 Hexo"></a>其·壹 为什么选择 Hexo</h2><p>博客平台有很多，比如 Typecho 、WordPress 等等。相对于 Typecho 和 WordPress 这类动态博客来说，Hexo 跟他们的最大区别就是静态了。这里的“动态、静态”主要是指其对数据处理的方式，通过数据库来动态的查询、调用、展示的叫“动态”，直接生成纯.html网页文件来供浏览的叫“静态”。详请参考<a href="https://zhuanlan.zhihu.com/p/35764312" target="_blank" rel="noopener">个人博客如何选择 Typecho 和 Hexo？-明月登楼的文章-知乎</a></p>
 <p>Hexo 正常来说，不需要部署到我们的服务器上，我们的服务器上保存的，其实是基于在 Hexo 通过 Markdown 编写的文章，然后 Hexo 帮我们生成静态的 html 页面，然后，将生成的 html 上传到我们的服务器。也就是说 Hexo是一套使用第三方主题模板+自己的博客文章（.md文件）+网站信息配置，通过Node.js进行本地连接混合生成一套静态网站的工具链套件。简而言之：Hexo 是个静态页面生成、上传的工具。</p>
 <p>作为一个轻量化的个人博客，Hexo即可满足绝大部分需求。而且 GitHub 的 Page 服务给用户提供了一个很方便的近乎零成本的部署方案。</p>
@@ -401,21 +296,33 @@
 <p>吐槽：虽然是照着视频做，但是还是花了我5个小时的时间……（可能是我比较磨蹭）</p>
 <hr>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"># 博客</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/04/blog_2/" rel="next" title="博文的发布与博客主题替换">
+      博文的发布与博客主题替换 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -468,6 +375,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#其·零-前言（碎碎念）"><span class="nav-number">1.</span> <span class="nav-text">其·零 前言（碎碎念）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其·壹-为什么选择-Hexo"><span class="nav-number">2.</span> <span class="nav-text">其·壹 为什么选择 Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其·贰-详细过程"><span class="nav-number">3.</span> <span class="nav-text">其·贰 详细过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Git"><span class="nav-number">3.1.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Node-js"><span class="nav-number">3.2.</span> <span class="nav-text">安装 Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-cnpm"><span class="nav-number">3.3.</span> <span class="nav-text">安装 cnpm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Hexo-博客框架"><span class="nav-number">3.4.</span> <span class="nav-text">安装 Hexo 博客框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建博客"><span class="nav-number">3.5.</span> <span class="nav-text">搭建博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将博客部署到远端（GitHub）"><span class="nav-number">3.6.</span> <span class="nav-text">将博客部署到远端（GitHub）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#叁·结语"><span class="nav-number">4.</span> <span class="nav-text">叁·结语</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
